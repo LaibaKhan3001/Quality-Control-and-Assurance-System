@@ -1,0 +1,50 @@
+﻿SQL queries:
+Employee:
+CREATE TABLE [dbo].[Employee] (
+    [EmployeeID]  INT            IDENTITY (1, 1) NOT NULL,
+    [Designation] NVARCHAR (255) NOT NULL,
+    [Name]        NVARCHAR (255) NOT NULL,
+    [Password]    NVARCHAR (255) NOT NULL,
+    PRIMARY KEY CLUSTERED ([EmployeeID] ASC)
+);
+
+
+Available:
+CREATE TABLE [dbo].[Available] (
+    [ID]          INT            IDENTITY (1, 1) NOT NULL,
+    [Designation] NVARCHAR (255) NOT NULL,
+    [Name]        NVARCHAR (255) NOT NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+
+
+
+
+ADDProjects:
+CREATE TABLE [dbo].[ADDProjects] (
+    [projName]        NCHAR (255) NOT NULL,
+    [projDetail]      NCHAR (255) NULL,
+    [projDescription] NCHAR (255) NULL,
+    CONSTRAINT [PK_ADDProjects] PRIMARY KEY CLUSTERED ([projName] ASC)
+);
+
+
+
+
+AssignDetail:
+CREATE TABLE [dbo].[AssignDetail] (
+    [Id]         INT         IDENTITY (1, 1) NOT NULL,
+    [pname]      NCHAR (255) NULL,
+    [programmer] NCHAR (255) NULL,
+    [teamLeader] NCHAR (255) NULL,
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+Bug:
+CREATE TABLE [dbo].[Bug] (
+    [pname]          NCHAR (255) NOT NULL,
+    [Bugtype]        NCHAR (255) NULL,
+    [BugDescription] NCHAR (255) NULL,
+    PRIMARY KEY CLUSTERED ([pname] ASC)
+);
